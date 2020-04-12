@@ -7,13 +7,7 @@ Download from https://github.com/fuzzklang/clojurian-GoL.
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar game-of-life-0.1.0-standalone.jar [args]
-
 ## Options
-
-FIXME: listing of options this app accepts.
 
 ## Examples
 
@@ -21,7 +15,7 @@ FIXME: listing of options this app accepts.
 
 ### Bugs
 
-...
+Bug in drawer.
 
 ### Any Other Sections
 ### That You Think
