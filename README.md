@@ -3,7 +3,7 @@ Conway's Game of Life written in Clojure
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Download from https://github.com/fuzzklang/clojurian-GoL.
 
 ## Usage
 
