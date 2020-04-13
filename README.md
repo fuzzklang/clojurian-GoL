@@ -12,9 +12,9 @@ Requires leiningen: https://leiningen.org/.
 From terminal:
 
 `lein run`  
-or `lein run <num generations>`
+or `lein run <num generations>`  
 or `lein run <num generations> <p>`  
-or `lein run <num generations> <columns> <rows>`
+or `lein run <num generations> <columns> <rows>`  
 or `lein run <num generations> <p> <columns> <rows>`  
 
 ## Options
