@@ -154,4 +154,4 @@
 (defn print-error []
   (println "Usage: lein run")
   (println "or     lein run <num generations>")
-  (println "or     lein run <num generations> <size x> <size y>"))
+  (println "or     lein run <num generations> <n columns> <n columns>"))
