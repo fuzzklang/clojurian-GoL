@@ -1,22 +1,21 @@
 # game-of-life
 Conway's Game of Life written in Clojure
 
-## Installation
-
+# Requirements
 Download from https://github.com/fuzzklang/clojurian-GoL.
+Requires leiningen https://leiningen.org/.
 
 ## Usage
+Usage: lein run
+or     lein run <num generations>
+or     lein run <num generations> <columns> <rows>
 
 ## Options
+num generations: Number of generations to run game for.
+columns:		 Number of columns.
+rows:			 Number of rows.
 
 ## Examples
-
-...
-
-### Bugs
-
-Bug in drawer.
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+lein run
+lein run 200
+lein run 100 50 25
