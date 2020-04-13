@@ -1,5 +1,5 @@
- Created by https://www.gitignore.io/api/linux,emacs,clojure
-# Edit at https://www.gitignore.io/?templates=linux,emacs,clojure
+ Created by https://www.gitignore.io/api/emacs,clojure
+# Edit at https://www.gitignore.io/?templates=emacs,clojure
 
 ### Clojure ###
 pom.xml
@@ -70,18 +70,4 @@ flycheck_*.el
 /network-security.data
 
 
-### Linux ###
-
-# temporary files which can be created if a process still has a handle open of a deleted file
-.fuse_hidden*
-
-# KDE directory preferences
-.directory
-
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
-
-# .nfs files are created when an open file is removed but is still being accessed
-.nfs*
-
-# End of https://www.gitignore.io/api/linux,emacs,clojure
+# End of https://www.gitignore.io/api/emacs,clojure
