@@ -2,15 +2,12 @@
   (:require [clojure.string :as str])
   (:gen-class))
 
+(declare x-boundary)
+(declare y-boundary)
+(declare cells)
+
 ;; Assumption: top left = [0,0] and bottom right = [x-max, y-max]
 ;; Also: a cell is alive if it is in set.
-(def ^:const x-boundary 35)
-(def ^:const y-boundary 20)
-;;(def ^:const cells #{[2 1] [3 1] [3 2]})
-;;(def ^:const cells #{[0 0]})
-;;(def ^:const cells #{[]})
-(def ^:const cells #{[2 0] [2 1] [2 2] [1 2] [0 1]})       ; glider
-
 (defn alive?
   "Returns true if cell is alive"
   [cells [x y]]
@@ -116,3 +113,45 @@
      (println))
    (println (to-string set))
    (println "Number of cells: " (count set))))
+
+(defn create-rand-set
+  "TODO: Return a set of random coordinates."
+  [x-max y-max]
+  #{[2 0] [2 1] [2 2] [1 2] [0 1]} ;; Glider
+  ;;(def ^:const cells #{[2 1] [3 1] [3 2]})
+  ;;(def ^:const cells #{[0 0]})
+  ;;(def ^:const cells #{[]})
+  ;;(def ^:const cells #{[2 0] [2 1] [2 2] [1 2] [0 1]})       ; glider
+  )
+
+(defn check-args [args]
+  (every? #(number? %) args))
+
+(defn setup-and-run
+  "Setup parameters and run loop function `n-generations` times."
+  ([]
+   (setup-and-run 100))
+
+  ([n-generations]
+   (setup-and-run n-generations 40 25))
+
+  ([n-generations x-max y-max]
+   (setup-and-run n-generations x-max y-max (create-rand-set x-max y-max)))
+
+  ([n-generations x-max y-max cells]
+   (def ^:const x-boundary x-max)
+   (def ^:const y-boundary y-max)
+   (def ^:const n-gens n-generations)
+   (loop [c cells
+          n n-gens
+          i 0]
+     (when (<= 0 n)
+       (Thread/sleep 40)
+       (draw c 60)
+       (println (str "Generation: " (format "%4d /%4d" i n-gens)))
+       (recur (next-generation c) (dec n) (inc i))))))
+
+(defn print-error []
+  (println "Usage: lein run")
+  (println "or     lein run <num generations>")
+  (println "or     lein run <num generations> <size x> <size y>"))
