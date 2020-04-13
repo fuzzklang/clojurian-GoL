@@ -1,6 +1,7 @@
 (ns game-of-life.core-test
   (:require [clojure.test :refer :all]
-            [game-of-life.core :refer :all]))
+            [game-of-life.core :refer :all]
+            [game-of-life.functions :refer :all]))
 
 (deftest check-all-neighbours1
   (testing "Expecting is-neigbour? to return true for all x in coords wrt cmp."
